@@ -1,3 +1,29 @@
+<!--
+  Topics covered in this template:
+  - Interpolation using {{ ... }}
+  - Calling component methods in the template
+  - String transformation like toUpperCase()
+  - Template expressions with arithmetic and ternary operators
+  - Displaying boolean, number, and other component values
+  - Using Angular signals in the UI
+-->
+
 <h1>Kishor Shinde</h1>
 
-<p>{{name}}</p>
+<!-- Example: interpolating a component property value -->
+<p>Kishor {{ name.toUpperCase() }}</p>
+
+<!-- Example: arithmetic expression evaluated directly in the template -->
+<p>{{ 10 + 5 }}</p>
+
+<!-- Example: ternary operator for conditional output -->
+<p>{{ isAdmin ? 'Welcome' : 'bad' }}</p>
+
+<!-- Example: showing multiple values in one line -->
+<p>{{ count }}, {{ price }}, {{ isLogin }}</p>
+
+<!-- Example: calling a method from the component -->
+<p>{{ getUser() }}</p>
+
+<!-- Example: reading a signal value with function call syntax -->
+<h1>{{ title() }}</h1>
