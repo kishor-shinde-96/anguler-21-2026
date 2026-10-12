@@ -1,3 +1,9 @@
 <h1>Kishor Shinde</h1>
 
-<p>{{name}}</p>
+<button (click)="handleClick()">Click Me</button>
+
+<input (input)="handleInput($event)" placeholder="Type something..." />
+
+<input (keyup)="handleKeyup($event)" placeholder="Press a key..." />
+
+<div (mouseover)="handleMouseEnter()" (mouseout)="handleMouseLeave()" class="hover-element">Hover over me!</div>
