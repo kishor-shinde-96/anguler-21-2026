@@ -1,3 +1,14 @@
-<h1>Kishor Shinde</h1>
+<h1>Simple Counter App</h1>
 
-<p>{{name}}</p>
+<p class="counter">{{counter}}</p>
+
+
+<div class="btns">
+  <!-- <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+  <button (click)="reset()" class="reset">Reset</button> -->
+<button (click)="handle('increment')">+</button>
+<button (click)="handle('decrement')">-</button>
+<button (click)="handle('reset')">Reset</button>
+
+</div>
