@@ -1,0 +1,15 @@
+<p>events works!</p>
+
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<p>Count: {{ count }}</p>
+
+<button (click)= "showEvent($event)">Show Event</button>
+
+<input (input)= "updateUsername($event.target.value)" placeholder="Enter your name" />
+
+<p>Hello, {{ username }}!</p>
+
+<form (submit)="handleSubmit($event)">
+  <input type="text" name="name" placeholder="Enter your name" />
+  <button type="submit">Submit</button>
