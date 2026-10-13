@@ -1,3 +1,17 @@
 <h1>Kishor Shinde</h1>
 
-<p>{{name}}</p>
+
+<input type="text" placeholder="Enter your name" (input)="updateName($event.target.value)"/>
+
+<p>Your Name : {{name}}</p>
+
+<input type="text" placeholder="Enter your city" (input)="city = $event.target.value"/>
+
+<p>Your City : {{city}}</p>
+
+
+<input type="text" placeholder="Enter your email" #userInput/>
+
+<button (click)="getEmail(userInput.value)">Submit</button>  
+
+<p>Your Email : {{email}}</p>
