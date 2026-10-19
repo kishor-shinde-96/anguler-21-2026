@@ -10,4 +10,16 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('anguler-tutorial-2026');
   name = "pune";
+
+
+  value: string = "contact";
+
+  age: number = 16;
+
+  tab ='home';
+
+  categoty ='';
+  updateCategory(val: string) {
+    this.categoty = val.toLowerCase();
+  }
 }

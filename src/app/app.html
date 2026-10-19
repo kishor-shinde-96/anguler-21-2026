@@ -1,3 +1,57 @@
 <h1>Kishor Shinde</h1>
 
 <p>{{name}}</p>
+
+
+@switch (value) {
+    @case ("Home") {
+        <h1>Home Page</h1>
+    }
+    @case ("About") {
+        <h1>About Page</h1>
+    }
+    @case ("contact") {
+        
+    }
+    @default {
+        <h1>Default Page</h1>
+    }
+
+}
+
+
+<button (click)="tab='home'">Home</button>
+<button (click)="tab='about'">About</button>
+<button (click)="tab='contact'">Contact</button>
+
+@switch (tab) {
+    @case ("home") {
+        <h1>Home Page</h1>
+    }
+    @case ("about") {
+        <h1>About Page</h1>
+    }
+    @case ("contact") {
+        <h1>Contact Page</h1>
+    }
+    @default {
+        <h1>Default Page</h1>
+    }
+
+}
+<input type="text" (input)="updateCategory($event.target.value)" placeholder="Enter category" />
+
+@switch (categoty) {
+    @case ('fruit') {
+        <h1>Fruit Category</h1>
+    }
+    @case ('veg') {
+        <h1>Vegetable Category</h1>
+    }
+    @case ('non-veg') {
+        <h1>Non-Vegetarian Category</h1>
+    }
+    @default {
+        <h1>Default Category</h1>
+    }
+}
