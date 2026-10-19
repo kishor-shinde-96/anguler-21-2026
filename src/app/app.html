@@ -1,3 +1,26 @@
 <h1>Kishor Shinde</h1>
 
 <p>{{name}}</p>
+
+@for (item of items; track $index) {
+    <p>{{$index + 1}}.{{item}}</p>
+}
+
+@for (user of users; track $index) {
+    <p>{{$index + 1}}.{{user.name}} ({{user.age}})</p>
+}
+
+
+@for (fruit of items1; track $index; let i= $index) {
+    <p>{{i + 1}}.{{fruit}}</p>
+    <button (click)="removeFruit(i)">Remove</button>    
+}
+
+@for (item of number; track $index) {
+   @if (item % 2 === 0) {
+        <p>{{$index + 1}}.{{item}} is Even</p>
+    } @else {
+        <p>{{$index + 1}}.{{item}} is Odd</p>
+    }
+
+}
