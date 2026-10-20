@@ -10,4 +10,9 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('anguler-tutorial-2026');
   name = "pune";
+
+  items = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular'];
+
+
+  numbers = [1, 2, 3, 4, 5];
 }
