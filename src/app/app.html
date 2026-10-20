@@ -1,3 +1,17 @@
 <h1>Kishor Shinde</h1>
 
 <p>{{name}}</p>
+<h2>Signal</h2>
+
+
+
+<p>Value: {{value}}</p>
+
+<p>Signal Count: {{count()}}</p>
+
+
+<!-- <button (click)="count.update((v) => v + 1)">Change Signal</button> -->
+
+<button (click)="increment()" style="background-color: aqua;">Increment</button>
+<button (click)="decrement()" style="background-color: lightcoral;">Decrement</button>
+<button (click)="reset()" style="background-color: lightgray;">Reset</button>
