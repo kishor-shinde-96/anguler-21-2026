@@ -1,3 +1,25 @@
 <h1>Kishor Shinde</h1>
 
+<h1>{{lname | uppercase}}</h1>
+<h1>{{uName | lowercase}}</h1>
 
+<p>Short date: {{today | date:'short'}}</p>
+<p>Medium date: {{today | date:'medium'}}</p>
+<p>Long date: {{today | date:'long'}}</p>
+<p>Full date: {{today | date:'full'}}</p>
+<p>ShortTime: {{today | date:'shortTime'}}</p>
+<p>MediumTime: {{today | date:'mediumTime'}}</p>
+<p>LongTime: {{today | date:'longTime'}}</p>
+<p>FullTime: {{today | date:'fullTime'}}</p>
+
+
+<p>INR : {{amount | currency:'INR'}}</p>
+<p>USD : {{amount | currency:'USD'}}</p>
+<p>EUR : {{amount | currency:'EUR'}}</p>
+<p>JPY : {{amount | currency:'JPY'}}</p>
+<p>GBP : {{amount | currency:'GBP'}}</p>     
+<p>CHF : {{amount | currency:'CHF'}}</p>
+
+<p> per : {{per | percent}}</p>
+
+<p> json : {{user | json}}</p>
