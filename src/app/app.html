@@ -1,3 +1,17 @@
-<h1>Kishor Shinde</h1>
 
 
+
+<h2> parent component </h2>
+<!-- <div>
+  <h3>child component</h3>
+  <app-child [name] = "username"></app-child>
+</div> -->
+
+<!-- <app-child (notify)="onMessage($event)"></app-child>
+
+<p>message from child component is {{message}}</p> -->
+
+
+<app-child #child></app-child>
+<p>message from child component is {{child.message()}}</p>
+ 
