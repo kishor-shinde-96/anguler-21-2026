@@ -1,13 +1,37 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [ReactiveFormsModule, CommonModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
   protected readonly title = signal('anguler-tutorial-2026');
- 
+
+  // name = signal('');
+  // email = signal('');
+
+  // submitForm() {
+
+  //   console.log(`Name: ${this.name()}, Email: ${this.email()}`);
+
+  // }
+
+  userSignal= signal({name: '', email: ''});
+  form: any;
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      name: ['',],
+      email: ['',],
+    })
+
+    this.form.valueChanges.subscribe((value : any) => {
+      this.userSignal.set(value);
+      console.log(value);
+    });
+  }
+
 }

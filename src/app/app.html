@@ -1,3 +1,42 @@
 <h1>Kishor Shinde</h1>
 
 
+<h2>Template-driven forms</h2>
+
+<!-- <input 
+[(ngModel)]="name"
+(ngModelChange)="name.set($event)"
+placeholder="Enter your name"
+style="width: 300px; height: 40px; font-size: 20px;"
+>
+
+<br><br>
+
+<input 
+[(ngModel)]="email"
+(ngModelChange)="email.set($event)"
+placeholder="Enter your email"
+style="width: 300px; height: 40px; font-size: 20px;"
+>
+
+<br><br>
+
+<button (click)="submitForm()">Submit</button>
+
+
+<p>Name: {{name()}}</p>
+<p>Email: {{email()}}</p> -->
+
+<h2>Signal-driven forms</h2>
+
+<form [formGroup]="form">
+  <input formControlName="name" placeholder="Enter your name">
+  <br><br>
+  <input formControlName="email" placeholder="Enter your email">
+  <br><br>
+</form>
+<button (click)="form.value.name.set('')">Reset</button>
+<br><br>
+<p> Signal Vake</p>
+
+<pre style="font-size: 20px;">{{userSignal() | json}}</pre>
