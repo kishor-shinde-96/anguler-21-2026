@@ -1,3 +1,11 @@
 <h1>Kishor Shinde</h1>
 
 
+<app-form-field
+[label]="'Email'"
+[type]="'email'"
+(valueChange)="onEmailChange($event)"
+>
+</app-form-field>
+
+<p>Email: {{email}}</p>
