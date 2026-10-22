@@ -1,3 +1,41 @@
 <h1>Kishor Shinde</h1>
+<!-- 
+<h2>Count: {{count()}}</h2>
 
 
+@if (isLoggedIn()) {
+    <h2>You are logged in</h2>
+}@else {
+    <p>welcome user</p>
+}
+
+<button (click)="isLoggedIn.set(true)" >login</button>
+
+<button (click)="isLoggedIn.set(false)" >logout</button>
+
+<button (click)="addItem()">Add Item</button>
+
+<ul>
+    @for (item of items(); track $index) {
+        <li>{{item}}</li>
+    }
+</ul> -->
+
+
+<h1>User Dashboard</h1>
+
+<button (click)="makeAdmin()">Make Admin</button>
+<button (click)="makeUser()">Make User</button>
+
+@if (role() === 'admin') {
+    <h2>Admin Panel</h2>
+}@else {
+    <p>Normal User</p>
+}
+
+
+<h3>Features</h3>
+<ul>
+    @for (feature of features(); track $index) {
+        <li>{{feature}}</li>
+    }
