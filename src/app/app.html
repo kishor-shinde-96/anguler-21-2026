@@ -1,5 +1,6 @@
 <a routerLink="/product/101">Product 101</a> <br> <br>
-<a routerLink="/product/202">Product 202</a>
+<a routerLink="/product/202">Product 202</a> <br> <br>
+
+<a [routerLink]="['/products']" [queryParams]="{ category: 'mobile', sort: 'price' }">All Products</a>
 
 <router-outlet></router-outlet>
-

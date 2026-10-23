@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,22 +8,22 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './product-comp.html',
 })
 export class ProductComp {
-  productId!: string;
-
-  constructor(private route: ActivatedRoute) {
-    // this.productId = this.route.snapshot.paramMap.get('id') || '';
-    this.route.paramMap.subscribe((params) => {
-      this.productId = params.get('id') || '';
-    })
-  }
-
-
-  //  productId = signal<string>('');
+  // productId!: string;
 
   // constructor(private route: ActivatedRoute) {
+  //   // this.productId = this.route.snapshot.paramMap.get('id') || '';
   //   this.route.paramMap.subscribe((params) => {
-  //     // Use .set() to update the signal value
-  //     this.productId.set(params.get('id') || ''); 
-  //   });
+  //     this.productId = params.get('id') || '';
+  //   })
   // }
+
+
+   productId = signal<string>('');
+
+  constructor(private route: ActivatedRoute) {
+    this.route.paramMap.subscribe((params) => {
+      // Use .set() to update the signal value
+      this.productId.set(params.get('id') || ''); 
+    });
+  }
 }
