@@ -1,11 +1,41 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "John Doe",
-            "email": "john@doe.com",
-            "isActive": true
-        }
-        
-    ]
+  "users": [
+    {
+      "name": "Sushant kumar",
+      "email": "Sus@gmail.com",
+      "isActive": true,
+      "id": "1"
+    },
+    {
+      "name": "Kishor Shinde",
+      "email": "kshi@ciklum.com",
+      "isActive": true,
+      "id": "VrmVaZvaN3o"
+    },
+    {
+      "name": "Kishor kumar",
+      "email": "kshinde@gnail.com",
+      "isActive": true,
+      "id": "xiWqskO_afU"
+    },
+    {
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "isActive": true,
+      "id": "infaLB_sSxw"
+    },
+    {
+      "name": "Rj",
+      "email": "rj@gmail.com",
+      "isActive": true,
+      "id": "84GyFdT-zQ4"
+    },
+    {
+      "name": "Rj",
+      "email": "mag@gmail.com",
+      "isActive": true,
+      "id": "bmUnSyuYJyg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
