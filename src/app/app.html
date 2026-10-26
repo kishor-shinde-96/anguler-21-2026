@@ -1,3 +1,8 @@
-<h1>Kishor Shinde</h1>
+<h3>Users from the server</h3>
+<ul>
+   @for (user of users(); track $index) {
+      <li>{{user.name}} - {{user.email}} - {{user.isActive}}</li>
+   }
 
-
+</ul>
+    
