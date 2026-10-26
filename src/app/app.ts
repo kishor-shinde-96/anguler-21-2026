@@ -1,13 +1,22 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { User } from './user';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
   protected readonly title = signal('anguler-tutorial-2026');
- 
+
+  users: any[] = [];
+
+  constructor(private userService: User) {}
+
+  ngOnInit() {
+    this.userService.getUsers().subscribe((data: any) =>{
+      this.users = data;
+    })
+  }
 }
