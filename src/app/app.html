@@ -1,3 +1,10 @@
-<h1>Kishor Shinde</h1>
+<h3>Login form based on signal</h3>
 
+<input type="email" placeholder="Enter your email" [formField]="loginForm.email" />
+<br>
+<input type="password" placeholder="Enter your password" [formField]="loginForm.password" />
+<br>
 
+<button (click)="submit()">Submit</button>
+
+<pre>{{ loginModel() | json }}</pre>
